@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.navigation.drawer.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- 
+        	We will launch BaseActivity as launcher.
+        	We will check if BaseActivity launch first time and open desired activity and set navigation item selected
+			 -->
+        <activity
+            android:name="com.navigation.drawer.activity.BaseActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+	
+		<activity android:name="com.navigation.drawer.activity.Item1Activity" />
+		<activity android:name="com.navigation.drawer.activity.Item2Activity" />
+		<activity android:name="com.navigation.drawer.activity.Item3Activity" />
+		<activity android:name="com.navigation.drawer.activity.Item4Activity" />
+		<activity android:name="com.navigation.drawer.activity.Item5Activity" />
+    </application>
+
+</manifest>
